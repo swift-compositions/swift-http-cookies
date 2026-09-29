@@ -31,7 +31,7 @@ extension HTTPCookies.EncodingPolicy {
 
         case .percentEncoded:
             return value.utf8.reduce(into: "") { result, byte in
-                if Self.isCookieOctet(byte) {
+                if byte != 0x25, Self.isCookieOctet(byte) {
                     result.append(Character(UnicodeScalar(byte)))
                 } else {
                     result.append("%")
