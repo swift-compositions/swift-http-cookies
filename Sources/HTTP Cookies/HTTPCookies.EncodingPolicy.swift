@@ -1,17 +1,13 @@
 extension HTTPCookies {
-    /// The policy used when a cookie value is serialized into a header field.
     public enum EncodingPolicy: Sendable, Hashable {
-        /// Require the value to already be a valid RFC 6265 cookie value.
         case raw
 
-        /// Percent-encode bytes that are not valid raw cookie-octets.
         case percentEncoded
     }
 }
 
 extension HTTPCookies.EncodingPolicy {
-    /// Errors produced while encoding a cookie value.
-    public enum Error: Swift.Error, Sendable, Hashable {
+    public enum Error: Swift::Error, Sendable, Hashable {
         case invalidCharacter(Character)
         case malformedPercentEscape
         case invalidUTF8

@@ -1,5 +1,4 @@
 extension HTTPCookies {
-    /// Attributes applied when a response sets a cookie.
     public struct Configuration: Sendable, Hashable {
         public var expires: String?
         public var maxAge: Int?

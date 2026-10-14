@@ -1,5 +1,4 @@
 extension HTTPCookies {
-    /// A name/value pair carried by the `Cookie` request header.
     public struct Cookie: Sendable, Hashable {
         public var name: String
         public var value: Value

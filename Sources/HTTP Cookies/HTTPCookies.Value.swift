@@ -1,5 +1,4 @@
 extension HTTPCookies {
-    /// The value carried by a cookie pair.
     public struct Value: Sendable, Hashable {
         public var string: String
 

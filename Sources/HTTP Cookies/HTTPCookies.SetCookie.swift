@@ -1,5 +1,4 @@
 extension HTTPCookies {
-    /// A name/value pair and attributes carried by the `Set-Cookie` response header.
     public struct SetCookie: Sendable, Hashable {
         public var cookie: Cookie
         public var configuration: Configuration
